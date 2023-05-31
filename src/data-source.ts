@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 import "dotenv/config";
-
+ 
 const AppDataSource = new DataSource(
   process.env.NODE_ENV === "test"
     ? {
@@ -9,7 +9,14 @@ const AppDataSource = new DataSource(
         synchronize: true,
         entities: ["src/entities/*.ts"],
       }
-    : {
+    : 
+    process.env.NODE_ENV === "production"
+    ? {
+      type: "postgres",
+      url: process.env.DATABASE_URL,
+      entities: ["src/entities/*.ts"],
+      migrations: ["src/migrations/*.ts"],
+    } : {
         type: "postgres",
         host: process.env.TYPEORM_HOST,
         port: 5432,
