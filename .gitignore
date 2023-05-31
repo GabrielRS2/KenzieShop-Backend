@@ -1,0 +1,10 @@
+node_modules/
+dist/
+yarn.lock
+.env
+yarn-error.log
+package-lock.json
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
