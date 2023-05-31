@@ -2,7 +2,7 @@
   "name": "projeto-full-stack-kenzie-m6g2",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:GabrielRS2/m6-g02-t11-backend.git",
+  "repository": "git@github.com:GabrielRS2/kenzieshop-backend",
   "author": "DavidBassouto <davidbassouto@hotmail.com>",
   "license": "MIT",
   "scripts": {
