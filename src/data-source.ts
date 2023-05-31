@@ -16,6 +16,8 @@ const AppDataSource = new DataSource(
       url: process.env.DATABASE_URL,
       entities: ["src/entities/*.ts"],
       migrations: ["src/migrations/*.ts"],
+      logging: true,
+      synchronize: false,
     } : {
         type: "postgres",
         host: process.env.TYPEORM_HOST,
